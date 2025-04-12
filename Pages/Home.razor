@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<ValidateForm Model="_model">
+    <AutoComplete @bind-Value="_model.Field1" Items="_items"></AutoComplete>
+    <BootstrapInput @bind-Value="_model.Field2"></BootstrapInput>
+    <Button ButtonType="ButtonType.Submit">Submit</Button>
+</ValidateForm>
+
+@code {
+    private readonly TestModel _model = new();
+    private readonly List<string> _items = ["123", "1234", "12345"];
+}
