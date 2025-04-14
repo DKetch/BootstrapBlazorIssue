@@ -9,4 +9,10 @@
 @code {
     private readonly TestModel _model = new();
     private readonly List<string> _items = ["123", "1234", "12345"];
+
+    protected override void OnInitialized()
+    {
+        _model.Field1 = "12345";
+        base.OnInitialized();
+    }
 }
